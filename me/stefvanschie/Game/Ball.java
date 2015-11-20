@@ -6,16 +6,14 @@ import java.awt.Rectangle;
 
 public class Ball extends GameObject {
 
-	private Handler handler;
 	private Health health;
 	
-	public Ball(int x, int y, ID id, Handler handler, Health health) {
+	public Ball(int x, int y, ID id, Health health) {
 		super(x, y, id);
 		velX = 3;
 		velY = 3;
 		setX(230);
 		setY(400);
-		this.handler = handler;
 		this.health = health;
 	}
 
@@ -38,7 +36,7 @@ public class Ball extends GameObject {
 		}
 		if (x <= 0 || x >= Game.width - 36)
 			velX *= -1;
-		handler.addObject(new Trail(x, y, ID.Trail, Color.RED, 24, 24, 0.05f, handler));
+		Handler.addObject(new Trail(x, y, ID.Trail, Color.RED, 24, 24, 0.05f, handler));
 		collision();
 	}
 
@@ -53,7 +51,7 @@ public class Ball extends GameObject {
 			if (tempObject.getID() == ID.BlueBlock) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					velY *= -1;
-					handler.removeObject(tempObject);
+					Handler.removeObject(tempObject);
 					health.points += 50;
 				}
 			}

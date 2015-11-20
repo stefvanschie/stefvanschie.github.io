@@ -5,18 +5,16 @@ import java.awt.event.KeyEvent;
 
 public class KeyInput extends KeyAdapter {
 
-	private Handler handler;
 	public boolean[] keys = new boolean[2];
-	public KeyInput(Handler handler) {
-		this.handler = handler;
+	public KeyInput() {
 		keys[0] = false;
 		keys[1] = false;
 	}
 	
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-		for (int i = 0; i < handler.object.size(); i++) {
-			GameObject tempObject = handler.object.get(i);
+		for (int i = 0; i < Handler.object.size(); i++) {
+			GameObject tempObject = Handler.object.get(i);
 			if (tempObject.getID() == ID.Beam) {
 				if (key == KeyEvent.VK_A) {
 					tempObject.setVelX(-2);
@@ -34,8 +32,8 @@ public class KeyInput extends KeyAdapter {
 	
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
-		for (int i = 0; i < handler.object.size(); i++) {
-			GameObject tempObject = handler.object.get(i);
+		for (int i = 0; i < Handler.object.size(); i++) {
+			GameObject tempObject = Handler.object.get(i);
 			if (tempObject.getID() == ID.Beam) {
 				if (key == KeyEvent.VK_A)
 					keys[0] = false;

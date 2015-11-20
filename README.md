@@ -1,2 +1,2 @@
 # arkanoid
-An java made arkanoid game (doesn't function well)
+A java made arkanoid game (doesn't function well)

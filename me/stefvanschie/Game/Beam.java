@@ -5,13 +5,9 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 public class Beam extends GameObject {
-
-	Handler handler;
 	
-	
-	public Beam (int x, int y, ID id, Handler handler) {
+	public Beam (int x, int y, ID id) {
 		super(x, y, id);
-		this.handler = handler;
 		setX(165);
 		setY(450);
 	}
@@ -19,7 +15,7 @@ public class Beam extends GameObject {
 	public void tick() {
 		x += velX;
 		x = Game.clamp(x, 0, Game.width - 155);
-		handler.addObject(new Trail(x, y, ID.Trail, Color.WHITE, 150, 25, 0.02f, handler));
+		Handler.addObject(new Trail(x, y, ID.Trail, Color.WHITE, 150, 25, 0.02f, handler));
 		collision();
 	}
 
@@ -30,7 +26,7 @@ public class Beam extends GameObject {
 
 	private void collision() {
 		for (int i = 0; i < handler.object.size(); i++) {
-			GameObject tempObject = handler.object.get(i);
+			GameObject tempObject = Handler.object.get(i);
 			if (tempObject.getID() == ID.Ball) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					tempObject.velY *= -1;

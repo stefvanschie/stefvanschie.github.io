@@ -4,5 +4,6 @@ public enum ID {
 	Ball(),
 	Beam(),
 	BlueBlock(),
+	PurpleBlock(),
 	Trail();
 }

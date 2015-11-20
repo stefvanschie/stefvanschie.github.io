@@ -8,7 +8,6 @@ import me.stefvanschie.Game.Game.STATE;
 
 public class BlueBlock extends GameObject {
 
-	public Handler handler;
 	public Game game;
 	
 	public BlueBlock(int x, int y, ID id, Handler handler, Game game) {

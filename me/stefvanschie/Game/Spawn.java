@@ -4,14 +4,12 @@ import java.util.Random;
 
 public class Spawn {
 
-	private Handler handler;
 	private Health health;
 	private Game game;
 	
 	private Random rnd;
 	
-	public Spawn spawn(Handler handler, Health health, Game game) {
-		this.handler = handler;
+	public Spawn spawn(Health health, Game game) {
 		this.health = health;
 		this.game = game;
 		this.rnd = new Random();
@@ -19,10 +17,10 @@ public class Spawn {
 	}
 	
 	public void tick() {
-		for (int i = 0; i < handler.object.size() ; i++) {
-			GameObject tempObject = handler.object.get(i);
+		for (int i = 0; i < Handler.objects.size() ; i++) {
+			GameObject tempObject = Handler.objects.get(i);
 			if (tempObject.getID() == ID.BlueBlock) {
-				if (!handler.objectExists(tempObject)) {
+				if (!Handler.objectExists(tempObject)) {
 					//nextlevel
 					System.out.println("Next level");
 					health.level++;
@@ -36,10 +34,10 @@ public class Spawn {
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j ++) {
 				if (block == 1) {
-					handler.addObject(new BlueBlock(48 + j * 96, 64 + i * 32, ID.BlueBlock, handler, game));
+					Handler.addObject(new BlueBlock(48 + j * 96, 64 + i * 32, ID.BlueBlock, game));
 				}
 				else if (block == 2) {
-					
+					Handler.addObject(new PurpleBlock(48 + j * 96, 64 + 1 * 32, ID.PurpleBlock, game));
 				}
 				else {
 					System.out.print("Unexpected Block");

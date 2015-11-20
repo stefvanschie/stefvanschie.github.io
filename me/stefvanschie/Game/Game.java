@@ -13,7 +13,6 @@ public class Game extends Canvas implements Runnable {
 	
 	private Thread thread;	
 	private boolean running = false;
-	private Handler handler;
 	private Health health;
 	private Spawn spawn;
 	private Menu menu;
@@ -25,7 +24,6 @@ public class Game extends Canvas implements Runnable {
 	public STATE gameState = STATE.Menu;
 	
 	public Game() {
-		handler = new Handler();
 		health = new Health();
 		spawn = new Spawn();
 		menu = new Menu(this, handler, health);
@@ -33,11 +31,11 @@ public class Game extends Canvas implements Runnable {
 		this.addKeyListener(new KeyInput(handler));
 		this.addMouseListener(menu);
 		if (gameState == STATE.Game) {
-			handler.addObject(new Ball(165, 430, ID.Ball, handler, health));
-			handler.addObject(new Beam(100, 100, ID.Beam, handler));
+			Handler.addObject(new Ball(165, 430, ID.Ball, health));
+			Handler.addObject(new Beam(100, 100, ID.Beam));
 			for (int i = 0; i < 4; i++) {
 				for (int j = 0; j < 4; j ++) {
-					handler.addObject(new BlueBlock(48 + j * 96, 64 + i * 32, ID.BlueBlock, handler, this));
+					Handler.addObject(new BlueBlock(48 + j * 96, 64 + i * 32, ID.BlueBlock, handler, this));
 				}
 			}
 		}
@@ -89,7 +87,7 @@ public class Game extends Canvas implements Runnable {
 	}
 	
 	private void tick() {
-		handler.tick();
+		Handler.tick();
 		if (gameState == STATE.Game) {
 			health.tick();
 			spawn.tick();
@@ -107,11 +105,11 @@ public class Game extends Canvas implements Runnable {
 		
 		g.setColor(Color.black);
 		g.fillRect(0, 0, width, height);
-		if (gameState == STATE.Game) {
+		if (gameState == STATE.Game)
 			health.render(g);
-		} else if (gameState == STATE.Menu)
+		else if (gameState == STATE.Menu)
 			menu.render(g);
-		handler.render(g);
+		Handler.render(g);
 		
 		g.dispose();
 		bs.show();

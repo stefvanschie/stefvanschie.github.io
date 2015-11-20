@@ -5,34 +5,30 @@ import java.util.LinkedList;
 
 public class Handler {
 
-	LinkedList<GameObject> object = new LinkedList<GameObject>();
+	private static LinkedList<GameObject> objects = new LinkedList<GameObject>();
 	
-	public void tick() {
-		for (int i = 0; i < object.size(); i++) {
-			GameObject tempObject = object.get(i);	
+	public void static tick() {
+		for (GameObject tempObject : objects) {
 			tempObject.tick();
 		}	
 	}
 	
-	public void render(Graphics g) {
-		for (int i = 0; i < object.size(); i++) {
-			GameObject tempObject = object.get(i);	
+	public void static render(Graphics g) {
+		for (GameObject tempObject : objects) {
 			tempObject.render(g);
 		}	
 	}
 	
-	public void addObject(GameObject object) {
-		this.object.add(object);
+	public void static addObject(GameObject object) {
+		this.objects.add(object);
 	}
 	
-	public void removeObject(GameObject object) {
-		this.object.remove(object);
+	public void static removeObject(GameObject object) {
+		this.objects.remove(object);
 	}
-	public boolean objectExists(GameObject object) {
-		if (this.object.contains(object)) {
+	public boolean static objectExists(GameObject object) {
+		if (this.objects.contains(object)) {
 			return true;
-		} else if (this.object.contains(object)) {
-			return false;
 		} else {
 			return false;
 		}

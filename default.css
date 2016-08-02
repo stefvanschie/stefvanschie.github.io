@@ -1,12 +1,10 @@
 .nav {
   background-color: black;
   padding: 30px;
-  clear: both;
-  margin: 0px;
 }
 
 .nav a {
   text-decoration: none;
   color: white;
-  float: right;
+  text-align: right;
 }

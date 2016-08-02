@@ -1,9 +1,9 @@
 .nav {
   background-color: black;
-  color: white;
   padding: 20px;
 }
 
 .nav a {
- text-decoration: none;
+  text-decoration: none;
+  color: white;
 }

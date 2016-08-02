@@ -8,6 +8,10 @@
   color: white;
 }
 
+.nav span {
+  display: inline-block;
+}
+
 .align-right {
   text-align: right;
 }

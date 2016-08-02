@@ -3,14 +3,14 @@
   padding: 30px;
 }
 
-.nav a #active {
-  color: white;
-}
-
 .nav a {
   text-decoration: none;
   color: #808080;
   margin-left: 20px;
+}
+
+#active {
+  color: white;
 }
 
 .nav span {

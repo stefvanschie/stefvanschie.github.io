@@ -1,11 +1,11 @@
 .nav {
   background-color: black;
   padding: 30px;
+  clear: both;
 }
 
 .nav a {
   text-decoration: none;
   color: white;
   float: right;
-  clear: both;
 }

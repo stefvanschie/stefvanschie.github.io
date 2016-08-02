@@ -5,6 +5,7 @@ body {
 .nav {
   background-color: black;
   padding: 30px;
+  border-radius: 5px;
 }
 
 .nav a {
@@ -29,4 +30,5 @@ body {
 .content {
   background-color: white;
   padding: 10px;
+  border-radius: 5px;
 }

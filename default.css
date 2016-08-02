@@ -10,12 +10,12 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #808080;
+  color: white;
   margin-left: 20px;
 }
 
 #active {
-  color: white;
+  color: #808080;
 }
 
 .nav span {

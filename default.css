@@ -27,5 +27,6 @@ body {
 }
 
 .content {
- background-color: white;
+  background-color: white;
+  margin: 10px;
 }

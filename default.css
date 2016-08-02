@@ -1,3 +1,7 @@
+body {
+  background-color: #F2F2F2;
+}
+
 .nav {
   background-color: black;
   padding: 30px;
@@ -20,4 +24,8 @@
 
 .align-right {
   text-align: right;
+}
+
+.content {
+ background-color: white;
 }

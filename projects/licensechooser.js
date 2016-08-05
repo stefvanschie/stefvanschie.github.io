@@ -115,7 +115,8 @@ $(document).ready(function() {
         found.push(key);
       }
     }
-
-    //show found licenses
+    for (var license in found) {
+      $("#licenses").html("<a href="http://google.com/#q=" + license + ">" + license + "</a><br / >");
+    }
   });
 });

@@ -115,8 +115,13 @@ $(document).ready(function() {
         found.push(key);
       }
     }
-    for (var license in found) {
-      $("#licenses").html("<a href="http://google.com/#q=" + license + ">" + license + "</a><br / >");
+    
+    if (found.length !== 0) {
+      for (var license in found) {
+        $("#licenses").html("<a href="http://google.com/#q=" + license + ">" + license + "</a><br / >");
+      }
+    } else {
+      $("#licenses").html("<p>We found zero matches for the current selected options</p>");
     }
   });
 });

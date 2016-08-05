@@ -98,6 +98,24 @@ var licenses = {
 
 $(document).ready(function() {
   $("#btn-license").click(function() {
-    
+    var found = [];
+
+    for (var key in licenses) {
+      if (!licenses.hasOwnProperty(key)) {
+        continue;
+      }
+
+      var correct = true;
+
+      for (var prop in licenses[key]) {
+        correct = $("input[value=" + prop + "]").is(":checked") == licenses[key][prop];
+      }
+
+      if (correct) {
+        found.push(key);
+      }
+    }
+
+    //show found licenses
   });
 });

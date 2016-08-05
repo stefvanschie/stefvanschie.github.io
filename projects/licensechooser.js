@@ -108,7 +108,7 @@ $(document).ready(function() {
       var correct = true;
 
       for (var prop in licenses[key]) {
-        correct = $("input[value=" + prop + "]").is(":checked") == licenses[key][prop];
+        correct = $("input[value='" + prop + "']").is(":checked") == licenses[key][prop];
       }
 
       if (correct) {
@@ -118,7 +118,7 @@ $(document).ready(function() {
     
     if (found.length !== 0) {
       for (var license in found) {
-        $("#licenses").html("<a href="http://google.com/#q=" + license + ">" + license + "</a><br / >");
+        $("#licenses").html("<a href='http://google.com/#q=" + license + '>" + license + "</a><br / >");
       }
     } else {
       $("#licenses").html("<p>We found zero matches for the current selected options</p>");

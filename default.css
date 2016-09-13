@@ -55,4 +55,7 @@ body {
 
 .code {
   background-color: gray;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
 }

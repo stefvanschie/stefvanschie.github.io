@@ -52,3 +52,7 @@ body {
   color: white;
   margin-right: 20px;
 }
+
+.code {
+  background-color: gray;
+}

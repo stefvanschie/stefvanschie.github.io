@@ -60,3 +60,9 @@ body {
   color: white;
   border-radius: 5px;
 }
+
+button {
+  background-color: #404040;
+  border-radius: 5px;
+  color: white;
+}

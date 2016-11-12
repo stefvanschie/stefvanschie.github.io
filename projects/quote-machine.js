@@ -5,9 +5,9 @@ var quotes = [
 ]
 
 $(document).ready(function() {
-  $(".quote").text(quotes[Math.floor(Math.random() * quotes.length)]);
+  $("#quote").text(quotes[Math.floor(Math.random() * quotes.length)]);
   
   $("button").click(function() {
-     $(".quote").text(quotes[Math.floor(Math.random() * quotes.length)]);
+     $("#quote").text(quotes[Math.floor(Math.random() * quotes.length)]);
   });
 });

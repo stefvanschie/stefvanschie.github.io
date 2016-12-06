@@ -7,7 +7,7 @@ var quotes = [
   "You miss 100 percent of the shots you never take.<br /><i> - Wayne Gretzky</i>",
   "Courage is not the absence of fear, but rather the judgement that something else is more important than fear.<br /><i> - Ambrose Redmoon</i>",
   "You must be the change you wish to see in the world.<br /><i> - Gandhi</i>",
-  "When hungry, eat your rice; when tired, close your eyes. Fools may laugh at me, but wise men will know what I mean.<br /><i> - Lin-Chi</i>"
+  "When hungry, eat your rice; when tired, close your eyes. Fools may laugh at me, but wise men will know what I mean.<br /><i> - Lin-Chi</i>",
   "The third-rate mind is only happy when it is thinking with the majority. The second-rate mind is only happy when it is thinking with the minority. The first-rate mind is only happy when it is thinking.<br /><i> - A. A. Milne</i>",
   "To the man who only has a hammer, everything he encounters begins to look like a nail.<br /><i> - Abraham Maslow</i>",
   "We are what we repeatedly do; excellence, then, is not an act but a habit.<br /><i> - Aristotle</i>",
@@ -42,7 +42,7 @@ var quotes = [
   "I don’t mind what Congress does, as long as they don’t do it in the streets and frighten the horses.<br /><i> - Victor Hugo</i>",
   "I took a speed reading course and read ‘War and Peace’ in twenty minutes. It involves Russia.<br /><i> - Woody Allen</i>",
   "The person who reads too much and uses his brain too little will fall into lazy habits of thinking.<br /><i> - Albert Einstein</i>",
-  "Believe those who are seeking the truth. Doubt those who find it.<br /><i> - André Gide</i>"
+  "Believe those who are seeking the truth. Doubt those who find it.<br /><i> - André Gide</i>",
   "It is the mark of an educated mind to be able to entertain a thought without accepting it.<br /><i> - Aristotle</i>",
   "I’d rather live with a good question than a bad answer.<br /><i> - Aryeh Frimer</i>",
   "We learn something every day, and lots of times it’s that what we learned the day before was wrong.<br /><i> - Bill Vaughan</i>",

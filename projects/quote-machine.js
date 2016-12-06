@@ -5,11 +5,9 @@ var quotes = [
 ];
 
 $(document).ready(function() {
-  alert("test");
-  
-  $("#quote").text(quotes[Math.floor(Math.random() * quotes.length)]);
+  $("#quote").html(quotes[Math.floor(Math.random() * quotes.length)]);
   
   $("button").click(function() {
-     $("#quote").text(quotes[Math.floor(Math.random() * quotes.length)]);
+     $("#quote").html(quotes[Math.floor(Math.random() * quotes.length)]);
   });
 });

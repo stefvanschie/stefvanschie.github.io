@@ -24,13 +24,13 @@ function drawPoles() {
 }
 
 function drawDisks() {
-  for (i = 0; i < pole1.length; i++) {
+  for (var i = 0; i < pole1.length; i++) {
     ctx.drawRect(1/9 * width - (pole1[i].size * 5), (4/5 * height) - 10, pole1[1].size * 10, 10);
   }
-  for (i = 0; i < pole2.length; i++) {
+  for (var i = 0; i < pole2.length; i++) {
     ctx.drawRect(1/9 * width - (pole2[i].size * 5), (4/5 * height) - 10, pole2[1].size * 10, 10);
   }
-  for (i = 0; i < pole3.length; i++) {
+  for (var i = 0; i < pole3.length; i++) {
     ctx.drawRect(1/9 * width - (pole3[i].size * 5), (4/5 * height) - 10, pole3[1].size * 10, 10);
   }
   

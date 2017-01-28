@@ -41,6 +41,7 @@ function draw() {
   ctx.beginPath();
   drawPoles();
   drawDisks();
+  ctx.fill();
   ctx.closePath();
 }
 

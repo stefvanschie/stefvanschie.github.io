@@ -17,13 +17,18 @@ pole1[1] = new Disk(2);
 pole1[2] = new Disk(1);
 
 function drawPoles() {
+  ctx.beginPath();
   ctx.fillRect(1/9 * width, 1/5 * height, 1/9 * width, 3/5 * height);
   ctx.fillRect(4/9 * width, 1/5 * height, 1/9 * width, 3/5 * height);
   ctx.fillRect(7/9 * width, 1/5 * height, 1/9 * width, 3/5 * height);
   ctx.fillStyle = "brown";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function drawDisks() {
+  ctx.beginPath();
+  
   for (var i = 0; i < pole1.length; i++) {
     ctx.drawRect(1/9 * width - (pole1[i].size * 5), (4/5 * height) - 10, pole1[1].size * 10, 10);
   }
@@ -34,15 +39,14 @@ function drawDisks() {
     ctx.drawRect(1/9 * width - (pole3[i].size * 5), (4/5 * height) - 10, pole3[1].size * 10, 10);
   }
   
-  ctx.strokeStyle = "blue";
+  ctx.fillStyle = "blue";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-  ctx.beginPath();
   drawPoles();
   drawDisks();
-  ctx.fill();
-  ctx.closePath();
 }
 
 draw();

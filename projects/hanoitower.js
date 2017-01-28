@@ -38,8 +38,10 @@ function drawDisks() {
 }
 
 function draw() {
+  ctx.beginPath();
   drawPoles();
   drawDisks();
+  ctx.closePath();
 }
 
 draw();

@@ -1,0 +1,9 @@
+com.github.stefvanschie.inventoryframework
+com.github.stefvanschie.inventoryframework.exception
+com.github.stefvanschie.inventoryframework.font
+com.github.stefvanschie.inventoryframework.font.util
+com.github.stefvanschie.inventoryframework.pane
+com.github.stefvanschie.inventoryframework.pane.component
+com.github.stefvanschie.inventoryframework.pane.component.util
+com.github.stefvanschie.inventoryframework.pane.util
+com.github.stefvanschie.inventoryframework.util
